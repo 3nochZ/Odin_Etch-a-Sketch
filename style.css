@@ -1,0 +1,37 @@
+body {
+    /* border: solid; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    /* border: dashed; */
+    /* display: flex; */
+    display: block;
+    justify-self: center;
+    margin: 3%;
+    width: 10vh;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    color: blueviolet;
+}
+
+
+input {
+    width: 50vh;
+    /* border-radius: 5%; */
+    margin: 10px;
+    /* border-color: aqua; */
+    border: none;
+    border-bottom: solid 2px lightblue;
+}
+
+h1 {
+    /* background: conic-gradient(red,blue,green, blue); */
+    background: linear-gradient(to left, rgb(5, 5, 138), purple);
+    background-clip: text;
+    color: transparent;
+}
