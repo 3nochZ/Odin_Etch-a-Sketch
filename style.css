@@ -1,6 +1,6 @@
 body {
-    /* border: solid; */
-    height: 100vh;
+    border: solid;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,15 +48,44 @@ h1 {
 
 .nested {
     border: solid 0px;
-    padding: 15px;
+    padding: 5px;
     /* margin: 1px; */
 }
 
 .inner {
     display: flex;
+    /* border: solid 1px; */
     /* margin:1px; */
 }
 
-.nested:hover  {
+/* .nested:hover  {
     background-color: aqua;
+} */
+
+/* .mainDiv {
+    align-self: center;
+    justify-self: center;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+} */
+.etchSketchContainer {
+    border: solid 1.5px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-self: center;
+    align-self: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin: 5px; */
+}
+
+.inputDiv {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
