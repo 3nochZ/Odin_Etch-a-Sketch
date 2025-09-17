@@ -102,6 +102,7 @@ defaultBtn.addEventListener('click', () => {
 confirmBtn.addEventListener('click', () => {
     const value = input.value;
     if (value > 100) {
+        alert("Value should be 100 and under");
         throw new Error("Value should be under 100");
     }
     input.value = "";

@@ -72,7 +72,7 @@ h1 {
     align-items: center; 
 } */
 .etchSketchContainer {
-    border: solid 1.5px;
+    border: solid 1.5px rgb(223, 218, 218);
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-self: center;
