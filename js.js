@@ -74,27 +74,18 @@ function divCreator (numOfDivs) {
     const divs = document.querySelectorAll('.nested')
     divs.forEach(div => {
         div.addEventListener('mouseenter', (event) => {
-            if (!event.target.style.backgroundColor) {
-                event.target.style.backgroundColor = randomColor();
-                event.target.style.opacity = 0.1;
-            }
-            
-            if (!div.classList.contains('1')) { 
-                div.classList.add('1');
+            if (!div.dataset.shade) {
+                div.dataset.shade = 1;
+                div.style.backgroundColor = randomColor();
             }
             else {
-                let lastClass = div.classList[div.classList.length - 1];
-                value = Number(lastClass) + 1;
-                if (value < 11) {
-                    div.classList.add(value);
-                    console.log(value);
-                }
-                else {
-                    return;
-                }
-                event.target.style.opacity = value/10;             
-            };         
-        console.log(div);
+                let value = Number(div.dataset.shade) + 1;
+                if (value > 10) return;
+                div.dataset.shade = value;
+            }
+
+            event.target.style.opacity = div.dataset.shade / 10;
+            // console.log(div);
         });
     });
 };
@@ -124,8 +115,4 @@ confirmBtn.addEventListener('click', () => {
 
 function randomColor() {
     return (`rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`);
-}
-
-function shader(HTML_Elem) {
-    // 
 }
