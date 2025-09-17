@@ -94,7 +94,7 @@ function divCreator (numOfDivs) {
 defaultBtn.addEventListener('click', () => {
     clearPage();
     removeInputPage();
-    divCreator(12); //12x12
+    divCreator(16); //12x12
 });
 
 //confirm button
