@@ -76,17 +76,25 @@ function divCreator (numOfDivs) {
         div.addEventListener('mouseenter', (event) => {
             if (!event.target.style.backgroundColor) {
                 event.target.style.backgroundColor = randomColor();
+                event.target.style.opacity = 0.1;
             }
-            // console.log(event.target.style.backgroundColor);
-            // event.target.style.backgroundColor = randomColor();
-            // div.classList = "color-set";
-            // console.log(div.classList);
-            // if (!event.target.style.backgroundColor) {
-            //     // bgColor =  randomColor();
-            //     console.log('yes');
-            //     // return;
-            // }
-            // event.target.style.backgroundColor = randomColor();
+            
+            if (!div.classList.contains('1')) { 
+                div.classList.add('1');
+            }
+            else {
+                let lastClass = div.classList[div.classList.length - 1];
+                value = Number(lastClass) + 1;
+                if (value < 11) {
+                    div.classList.add(value);
+                    console.log(value);
+                }
+                else {
+                    return;
+                }
+                event.target.style.opacity = value/10;             
+            };         
+        console.log(div);
         });
     });
 };
@@ -116,4 +124,8 @@ confirmBtn.addEventListener('click', () => {
 
 function randomColor() {
     return (`rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`);
+}
+
+function shader(HTML_Elem) {
+    // 
 }
